@@ -503,7 +503,7 @@ async function detectPrerequisites(question, correctAnswer, wrongAnswer) {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       credentials: 'include',
-      body: JSON.stringify({ question, correct_answer: correctAnswer, wrong_answer: wrongAnswer })
+      body: JSON.stringify({question: question, correct_answer: correctAnswer, wrong_answer: wrongAnswer })
     });
     console.log('Prerequisite detection response:', response.status, new Date().toISOString()); // Debug log
     if (response.ok) {
